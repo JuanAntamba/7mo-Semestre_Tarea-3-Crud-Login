@@ -1,6 +1,5 @@
-<p align="center">
-  <img src="docs/portada.png" alt="Portada UDLAEats" width="100%" style="border-radius: 15px;">
-</p>
+![Portada principal de UDLAEats](docs/portada.png)
+
 # 🍔 UDLAEats - Sistema de Gestión de Pedidos
 
 UDLAEats es una aplicación web de delivery interno diseñada para la comunidad de la Universidad de las Américas (UDLA). Este proyecto demuestra la implementación de una arquitectura robusta, un sistema de seguridad por autenticación y un ciclo completo de gestión de datos (CRUD).
