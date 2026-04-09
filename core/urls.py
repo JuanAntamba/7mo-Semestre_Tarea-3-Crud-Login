@@ -16,15 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pedidos import views # Importamos las vistas que acabamos de crear
+from pedidos import views
+from django.views.generic import RedirectView 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    # 1. Activamos el sistema de Login automático de Django
+
     path('cuentas/', include('django.contrib.auth.urls')), 
     
-    # 2. Esta es la URL de tu CRUD protegido
+    
     path('panel/', views.panel_estudiante, name='panel'),
 ]
 
@@ -45,4 +46,6 @@ urlpatterns = [
     
     # NUEVA RUTA: Para editar el pedido
     path('editar/<int:pedido_id>/', views.editar_pedido, name='editar_pedido'),
+    
+    path('', RedirectView.as_view(url='/panel/')), 
 ]
